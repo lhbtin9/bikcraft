@@ -1,0 +1,278 @@
+/* ##### Google Font ##### */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,900;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ##### Format CSS ##### */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Roboto';
+    font-size: 62.5%;
+    line-height: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+/* ##### Library ##### */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    border-radius: 5px;
+    color: #000;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.btn-warning {
+    background: linear-gradient(180deg, #FFBB00 0%, #F2A60C 100%);
+}
+
+.btn-warning:hover {
+    background: linear-gradient(180deg, #ffbb009c 0%, #f2a50cae 100%); 
+}
+
+.btn-dark {
+    background-color:#121212;
+    color: #fff;
+}
+
+.btn-dark:hover {
+    background-color: #232323;
+}
+
+body.no-scroll {
+    overflow: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.app {
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    background-color: #000;
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 50px;
+}
+
+.nav-logo {
+    padding: 0 15px;
+}
+
+.nav-link {
+    display: flex;
+}
+
+.nav-link-item {
+    padding: 28px 18px;
+    color: #fff;
+    font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer {
+    background-color: #000;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+
+.footer-col-heading {
+    color: #fff;
+    font-size: 2.4rem;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+
+.footer-col-logo {
+    width: 15%;
+}
+
+.footer-col-logo img {
+    width: 80% !important;
+}
+
+.footer-col-contact {
+    width: 25%;
+}
+
+.footer-col-list-item {
+    border-bottom: 1px solid #121212;
+}
+
+.footer-col-list-item:last-child{
+    border: none;
+}
+
+.footer-col-list-item {
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+.footer-col-list-item p {
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 32px;
+}
+
+.footer-col-information {
+    width: 25%;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+}
+
+.footer-social-item {
+    margin-right: 20px;
+}
+
+
+.footer-col-links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-col-link {
+    font-size: 1.8rem;
+    line-height: 36px;
+    color: #B3B3B3;
+    padding: 5px 5px 5px 0;
+}
+
+.footer-coppyright p {
+    color: #9C9C9C;
+    font-size: 1.8rem;
+    line-height: 32px;
+}
+
+
+.icon-open-btn {
+    width: 30px;
+    height: 30px;
+    background: url(../../assets/img/menu.png) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    display: none;
+}
+
+.icon-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: url(../../assets/img/close.png) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    display: none;
+}
+
+/* Tablet Reponsive */
+@media only screen and (max-width : 1200px) {
+    .app {
+        overflow: hidden;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .navbar {
+        padding-right: 16px;
+    }
+    
+    .nav-logo {
+        padding: 0 35px;
+    }
+}
+
+/* Smartphone Reponsive */
+@media only screen and (max-width : 768px) {
+    .nav-link {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        bottom: 0;
+        /* left: 0; */
+        width: 100%;
+        background-color: #000;
+        z-index: 9;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: .5s;
+    }
+
+    .nav-link.active {
+        right: 0;
+        opacity: 1;
+    }
+    
+    .icon-open-btn {
+        display: block;
+    }
+
+    .icon-close-btn {
+        display: block;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .footer-col-logo {
+        width: 40%;
+        margin-bottom: 50px;
+    }
+
+    .footer-col-contact {
+        width: unset;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-col-information {
+        width: unset;
+        text-align: center;
+    }
+
+    .footer-coppyright {
+        text-align: center;
+    }
+}
